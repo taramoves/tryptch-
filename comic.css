@@ -1,0 +1,137 @@
+body{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+
+#cover{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    left: -10px;
+    top: -10px;
+    animation: bg-animation 1s ease 0s infinite alternate,
+    bg-black 1s steps(2,end) 0s infinite alternate;
+}
+
+@keyframes bg-animation {
+  0% {
+    background-color: hsl(0, 50%, 50%);
+  }
+  100% {
+    background-color: hsl(100, 50%, 50%);
+  }
+}
+
+@keyframes bg-black {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.dancespace{
+  position: absolute;
+  height: 400px;
+  width: 300px;
+  border-radius: 50px;
+  border: 10px solid pink;
+}
+
+.shadow{
+  filter: brightness(0);
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  left: -200px;
+  bottom: -120px;
+}
+
+.shadowtransform > img{
+    /* left: -200px; */
+    animation: shadow 3s cubic-bezier(0, 0.82, 1, 0.07) 0s infinite ;
+}
+
+@keyframes shadow {
+  0% {
+    left: -500px;
+  }
+  100% {
+    left: 100px;
+  }
+}
+
+.dance{
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  left: 0px;
+  bottom: 0px;
+  animation: color-animation 10s ease 0s infinite;
+}
+
+#panel1{
+  left: 30px;
+  top: 30px;
+}
+
+#panel1shadow{
+  background-color: grey;
+  left: 30px;
+  top: 30px;
+  overflow: hidden;
+}
+
+#panel2{
+  left: 430px;
+  top: 30px;
+  filter: hue-rotate(100deg);
+}
+
+#panel2shadow{
+  background-color: grey;
+  left: 430px;
+  top: 30px;
+  overflow: hidden;
+}
+
+#mereba{
+  left: -60px;
+}
+
+#merebashadow > img{
+  /* left: -150px; */
+}
+
+#panel3{
+  left: 830px;
+  top: 30px;
+  filter: hue-rotate(200deg);
+}
+
+#panel3shadow{
+  background-color: grey;
+  left: 830px;
+  top: 30px;
+  overflow: hidden;
+}
+
+#yaz{
+  left: -90px;
+}
+
+#yazshadow > img{
+  /* left: -110px; */
+}
+
+@keyframes color-animation {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
